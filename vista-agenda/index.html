@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar cita veterinaria</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+  <form class="formulario" id="formularioAgenda">
+    <h1>Agendar cita</h1>
+    <p class="descripcion">
+      Completa los datos para solicitar una cita veterinaria.
+    </p>
+
+    <div class="campo">
+      <label for="propietario">Nombre del propietario</label>
+      <input type="text" id="propietario" name="propietario" autocomplete="name" required>
+    </div>
+
+    <div class="campo">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" autocomplete="email" required>
+    </div>
+
+    <div class="campo">
+      <label for="mascota">Nombre de la mascota</label>
+      <input type="text" id="mascota" name="mascota" required>
+    </div>
+
+    <div class="campo">
+      <label for="especie">Especie</label>
+      <select id="especie" name="especie" required>
+        <option value="">Selecciona una especie</option>
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="servicio">Servicio veterinario</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="consulta general">Consulta general</option>
+        <option value="vacunación">Vacunación</option>
+        <option value="baño">Baño</option>
+        <option value="ecografía">Ecografía</option>
+      </select>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" min="2026-10-14" required>
+      </div>
+
+      <div class="campo">
+        <label for="hora">Hora</label>
+        <select id="hora" name="hora" required>
+          <option value="">Selecciona una hora</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+        </select>
+
+      </div>
+    </div>
+
+    <button type="submit">Solicitar cita</button>
+  </form>
+
+  <script src="./js//main.js"></script>
+</body>
+
+</html>
